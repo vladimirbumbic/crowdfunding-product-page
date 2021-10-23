@@ -1,0 +1,1003 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: $brColor;
+
+    header {
+        background-image: url('/images/image-hero-mobile.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        @media only screen and (min-width: 768px) {
+            background-image: url('/images/image-hero-desktop.jpg');
+            height: 420px;
+        }
+        .container-header {
+            margin: 0 24px;
+            padding-top: 32px;
+            @media only screen and (min-width: 768px) {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-image: linear-gradient(
+                        to bottom,
+                        rgba(0, 0, 0, 0.5),
+                        transparent 50%,
+                        transparent
+                    );
+                    width: 100%;
+                    height: 328px;
+                }
+            }
+            nav {
+                display: flex;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @media only screen and (min-width: 768px) {
+                    .logo {
+                        margin-left: 153px;
+                        margin-top: -28px;
+                        position: relative;
+                    }
+                }
+                @media only screen and (min-width: 768px) {
+                    .burger {
+                        display: none;
+                    }
+                }
+
+                .navbar-list {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    padding: 24px;
+                    top: 55px;
+                    border-radius: 10px;
+                    width: 100%;
+                    transform: scale(1, 0);
+                    background-color: $white;
+                    box-shadow: 0 0 0 9999rem rgba(0, 0, 0, 0.5);
+                    z-index: 100;
+                    display: block;
+                    list-style-type: disc;
+                    height: 212px;
+                    @media only screen and (min-width: 768px) {
+                        all: unset;
+                        display: flex;
+                        gap: 32px;
+                        transform: scale(1, 1);
+                        margin-right: 160px;
+                        margin-top: 15px;
+                    }
+                    .nav-link {
+                        list-style: none;
+                        @media only screen and (min-width: 768px) {
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                        a {
+                            text-decoration: none;
+                            color: $black;
+                            font-weight: 700;
+                            font-family: Commissioner;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 22px;
+                            @media only screen and (min-width: 768px) {
+                                font-family: Commissioner;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 13px;
+                                line-height: 16px;
+                                display: flex;
+                                align-items: center;
+                                color: $white;
+                            }
+                        }
+                        &:not(:last-child):after {
+                            content: '';
+                            display: block;
+                            margin: 24px -24px;
+                            width: auto;
+                            height: 1px;
+                            background: #2f2f2f;
+                            mix-blend-mode: normal;
+                            opacity: 0.1;
+                        }
+                    }
+                }
+                .navbar-list.nav-active {
+                    transform: scale(1, 1);
+                }
+            }
+        }
+    }
+
+    main {
+        background-color: rgb(250, 250, 250);
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 0px 24px;
+            @media only screen and (min-width: 768px) {
+                position: relative;
+                top: -35px;
+                width: 730px;
+                margin: 0 auto;
+            }
+            section.title-card {
+                background: $white;
+                border: 1px solid rgba(0, 0, 0, 0.0497193);
+                border-radius: 8px;
+                margin-top: -55px;
+                .small-logo {
+                    width: 56px;
+                    height: 56px;
+                    margin: -28px auto 24px;
+                }
+                h2 {
+                    font-family: Commissioner;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 24px;
+                    align-items: center;
+                    text-align: center;
+                    color: $black;
+                    margin-left: 28px;
+                    margin-right: 28px;
+                    margin-bottom: 16px;
+                    @media only screen and (min-width: 768px) {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 28px;
+                        line-height: 34px;
+                        align-items: center;
+                        text-align: center;
+                        color: $black;
+                    }
+                }
+                p {
+                    font-family: Commissioner;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 24px;
+                    align-items: center;
+                    text-align: center;
+                    color: $gray;
+                    margin-right: 23.5px;
+                    margin-left: 23.5px;
+                    margin-bottom: 24px;
+                    @media only screen and (min-width: 768px) {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 20px;
+                        align-items: center;
+                        text-align: center;
+                        color: $gray;
+                        margin-bottom: 40px;
+                    }
+                }
+
+                .btn-group {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-bottom: 40px;
+                    @media only screen and (min-width: 768px) {
+                        padding-bottom: 48px;
+                    }
+                    .btn-1 {
+                        margin-left: 24px;
+                        background: $colorGreen;
+                        border-radius: 33.5px;
+                        padding: 17px 42px 19px 42px;
+                        border: none;
+                        outline: none;
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 20px;
+                        align-items: center;
+                        text-align: center;
+                        color: $white;
+                        width: 214px;
+                        @media only screen and (min-width: 768px) {
+                            position: relative;
+                            margin-left: 48px;
+                            font-family: Commissioner;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 16px;
+                            line-height: 20px;
+                            display: flex;
+                            align-items: center;
+                            color: $white;
+                            padding: 17px 41px 19px 40px;
+                            width: 204px;
+                        }
+                        &:hover {
+                            background-color: $hoverGreen;
+                            cursor: $cursor;
+                        }
+                    }
+                    .btn-2 {
+                        outline: none;
+                        border: none;
+                        margin-right: 24px;
+                        border-radius: 33.5px;
+                        height: 56px;
+                        @media only screen and (min-width: 768px) {
+                            position: relative;
+                            margin-right: 48px;
+                        }
+
+                        &:hover {
+                            background-color: $lightGray;
+                            cursor: $cursor;
+                        }
+                    }
+                    .btn-with-image {
+                        @media only screen and (min-width: 768px) {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                    }
+
+                    .btn-text {
+                        display: none;
+                        @media only screen and (min-width: 768px) {
+                            display: block;
+                            padding-left: 16px;
+                            padding-right: 24px;
+                            font-family: Commissioner;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 16px;
+                            line-height: 20px;
+                            display: flex;
+                            align-items: center;
+                            color: $gray;
+                        }
+                    }
+                }
+            }
+
+            section.statistics {
+                .split {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    background: $white;
+                    border: 1px solid rgba(0, 0, 0, 0.0497193);
+                    border-radius: 8px;
+                    @media only screen and (min-width: 768px) {
+                        padding-bottom: 98px;
+                        padding-top: 8px;
+                    }
+                    h1 {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 32px;
+                        line-height: 39px;
+                        align-items: center;
+                        text-align: center;
+                        color: $black;
+                        padding-top: 33px;
+                        margin-bottom: 9px;
+                    }
+                    p {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 17px;
+                        align-items: center;
+                        text-align: center;
+                        color: $gray;
+                    }
+                    .below {
+                        padding-bottom: 84px;
+                    }
+                    .g1 {
+                        @media only screen and (min-width: 768px) {
+                            position: absolute;
+                            margin-left: 48px;
+                        }
+                    }
+                    .g2 {
+                        @media only screen and (min-width: 768px) {
+                            position: absolute;
+                            margin-left: 275px;
+                            margin-top: -80px;
+                        }
+                    }
+                    .g3 {
+                        @media only screen and (min-width: 768px) {
+                            position: absolute;
+                            margin-left: 503px;
+                            margin-top: -80px;
+                        }
+                    }
+                    .separator {
+                        background: $black;
+                        mix-blend-mode: normal;
+                        opacity: 0.15;
+                        height: 1px;
+                        width: 80px;
+                        margin: 24px auto 0px;
+                    }
+                    .sep1 {
+                        @media only screen and (min-width: 768px) {
+                            width: 1px;
+                            height: 56px;
+                            margin-left: 227px;
+                        }
+                    }
+                    .sep2 {
+                        @media only screen and (min-width: 768px) {
+                            width: 1px;
+                            height: 56px;
+                            margin-left: 455px;
+                            margin-top: -56px;
+                        }
+                    }
+                }
+                .progress-bar {
+                    height: 12px;
+                    position: relative;
+                    background-color: rgba(221, 217, 217, 0.281);
+                    mix-blend-mode: normal;
+                    border-radius: 33.5px;
+                    margin-top: -52px;
+                    margin-left: 25px;
+                    margin-right: 23px;
+                    @media only screen and (min-width: 768px) {
+                        margin-left: 48px;
+                        margin-right: 48px;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        height: 12px;
+                        border-radius: 33.5px;
+                        background-color: $colorGreen;
+                        width: var(--progress-bar);
+                    }
+                }
+            }
+
+            section.about {
+                background: $white;
+                border: 1px solid rgba(0, 0, 0, 0.0497193);
+                border-radius: 8px;
+                padding-bottom: 40px;
+                margin-top: 44px;
+                h2 {
+                    font-family: Commissioner;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 22px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    color: $black;
+                    margin: 0 24px;
+                    padding-top: 40px;
+                    @media only screen and (min-width: 768px) {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 20px;
+                        line-height: 24px;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        color: $black;
+                        margin-left: 48px;
+                    }
+                }
+                p {
+                    font-family: Commissioner;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 24px;
+                    display: flex;
+                    align-items: center;
+                    color: $gray;
+                    margin: 0 24px;
+                    padding-top: 24px;
+                    @media only screen and (min-width: 768px) {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 30px;
+                        display: flex;
+                        align-items: center;
+                        color: $gray;
+                        font-weight: 400;
+                        margin: 0px 48px;
+                    }
+                }
+                .mB {
+                    margin-bottom: 35px;
+                }
+                .bottom {
+                    margin-bottom: 24px;
+                }
+
+                div.reward-card {
+                    position: relative;
+                    border-radius: 8px;
+                    background: $white;
+                    border: 1px solid rgba(0, 0, 0, 0.15);
+                    margin-bottom: 24px;
+                    margin: 0 24px 24px;
+                    @media only screen and (min-width: 768px) {
+                        margin-left: 48px;
+                        margin-right: 48px;
+                    }
+
+                    .reward-header {
+                        @media only screen and (min-width: 768px) {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                        }
+                        h4 {
+                            font-family: Commissioner;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 17px;
+                            align-items: center;
+                            color: $black;
+                            margin-top: 24px;
+                            margin-left: 24px;
+                            @media only screen and (min-width: 768px) {
+                                font-family: Commissioner;
+                                font-style: normal;
+                                font-weight: bold;
+                                font-size: 18px;
+                                line-height: 22px;
+                                align-items: center;
+                                color: $black;
+                                margin-left: 24px;
+                            }
+                        }
+                        .pledge {
+                            font-family: Commissioner;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 17px;
+                            align-items: center;
+                            color: $colorGreen;
+                            margin-top: -22px;
+                            @media only screen and (min-width: 768px) {
+                                font-family: Commissioner;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 15px;
+                                line-height: 18px;
+                                display: flex;
+                                align-items: center;
+                                text-align: right;
+                                color: $colorGreen;
+                                position: relative;
+                                margin-top: 0px;
+                            }
+                        }
+                    }
+                    p {
+                        @media only screen and (min-width: 768px) {
+                            font-family: Commissioner;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 16px;
+                            line-height: 30px;
+                            display: flex;
+                            align-items: center;
+                            color: $gray;
+                            margin-left: 24px;
+                            margin-right: 24px;
+                        }
+                    }
+                }
+                .reward-availability {
+                    @media only screen and (min-width: 768px) {
+                        display: flex;
+                        justify-content: space-between;
+                        position: relative;
+                    }
+                    h1 {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 32px;
+                        line-height: 39px;
+                        color: $black;
+                        margin-left: 24px;
+                    }
+                    span {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 15px;
+                        line-height: 18px;
+                        align-items: center;
+                        color: $gray;
+                        vertical-align: 5px;
+                    }
+                    .selectReward {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 17px;
+                        display: flex;
+                        align-items: center;
+                        color: $white;
+                        background: $colorGreen;
+                        border-radius: 33.5px;
+                        padding: 15px 33px 16px 32px;
+                        border: none;
+                        outline: none;
+                        margin-top: 24px;
+                        margin-left: 24px;
+                        margin-bottom: 24px;
+                        @media only screen and (min-width: 768px) {
+                            margin-right: 24px;
+                            margin-top: 0px;
+                            &:hover {
+                                background-color: $hoverGreen;
+                                cursor: $cursor;
+                            }
+                        }
+                    }
+                }
+                .out-of-stock {
+                    opacity: 0.5;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow: auto;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-top: 121px;
+        padding-bottom: 120px;
+        .modal-content {
+            background-color: $white;
+            border-radius: 8px;
+            padding: 32px 24px;
+            margin-left: 24px;
+            margin-right: 24px;
+            @media only screen and (min-width: 768px) {
+                margin: 0px auto;
+                width: 730px;
+            }
+            .modal-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 24px;
+                h2 {
+                    font-family: Commissioner;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: $black;
+                    @media only screen and (min-width: 768px) {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 29px;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        color: $black;
+                    }
+                }
+            }
+            p {
+                font-family: Commissioner;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 24px;
+                color: $gray;
+                margin-bottom: 24px;
+                @media only screen and (min-width: 768px) {
+                    font-family: Commissioner;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 30px;
+                    display: flex;
+                    align-items: center;
+                    color: $gray;
+                }
+            }
+
+            .reward-card {
+                position: relative;
+                padding: 24px;
+                border-radius: 8px;
+                background: $white;
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                margin-bottom: 24px;
+
+                .reward-header-wrapper {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 0px;
+                    padding-top: 14px;
+
+                    input {
+                        padding: 15px 10px 16px 41px;
+                        border: 1px solid #c3c2c2;
+                        border-radius: 33.5px;
+                        border: 1px solid rgba(0, 0, 0, 0.15);
+                        width: 100px;
+                        outline: none;
+                    }
+                    input[type='checkbox'] {
+                        display: none;
+                    }
+
+                    .custom-checkbox {
+                        position: relative;
+                        width: 24px;
+                        height: 24px;
+                        background: $white;
+                        border: 1px solid rgba(0, 0, 0, 0.15);
+                        border-radius: 50%;
+                        margin-right: 16px;
+                    }
+                    input[type='checkbox']:checked ~ .custom-checkbox::after {
+                        content: '';
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: $colorGreen;
+                    }
+                    .custom-checkbox {
+                        align-self: baseline;
+                        margin-top: -5px;
+                    }
+                    .reward-header {
+                        margin-top: -12px;
+                        .pledge {
+                            color: $colorGreen;
+                        }
+                    }
+                    .hMove {
+                        @media only screen and (min-width: 768px) {
+                            display: flex;
+                        }
+                    }
+                    .bS {
+                        @media only screen and (min-width: 768px) {
+                            margin-left: 9px;
+                            margin-top: -18px;
+                            margin-right: 17px;
+                            font-family: Commissioner;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 16px;
+                            line-height: 20px;
+                            display: flex;
+                            align-items: center;
+                            color: $black;
+                            &:hover {
+                                color: $colorGreen;
+                                cursor: $cursor;
+                            }
+                        }
+                    }
+                    .pl {
+                        @media only screen and (min-width: 768px) {
+                            font-family: Commissioner;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 16px;
+                            line-height: 20px;
+                            display: flex;
+                            align-items: center;
+                            color: $colorGreen;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    h4 {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 17px;
+                        display: flex;
+                        align-items: center;
+                        color: $black;
+                    }
+
+                    .up {
+                        @media only screen and (min-width: 768px) {
+                            margin-top: -16px;
+                            margin-left: 9px;
+                            font-family: Commissioner;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 16px;
+                            line-height: 20px;
+                            display: flex;
+                            align-items: center;
+                            color: $black;
+                            &:hover {
+                                color: $colorGreen;
+                                cursor: $cursor;
+                            }
+                        }
+                    }
+                }
+                .move {
+                    @media only screen and (min-width: 768px) {
+                        margin-left: 48px;
+                        margin-right: 10px;
+                    }
+                }
+                .left2 {
+                    @media only screen and (min-width: 768px) {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 18px;
+                        line-height: 22px;
+                        display: flex;
+                        align-items: center;
+                        color: $black;
+                        position: absolute;
+                        margin-top: -128px;
+                        margin-left: 560px;
+                    }
+                }
+                .pledge-form-content-wrapper {
+                    @media only screen and (min-width: 768px) {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+                .rd {
+                    margin-top: 27px;
+                }
+
+                .add-pledge-section {
+                    hr {
+                        margin: 16px -24px;
+                        border-color: $hrColor;
+                    }
+                    .enter-pledge {
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 28px;
+                        color: $gray;
+                        text-align: center;
+                        margin-top: 13.5px;
+                        margin-bottom: 11px;
+                    }
+
+                    .form-group {
+                        display: flex;
+                        justify-content: center;
+                        gap: 16px;
+                        .input-icon {
+                            position: relative;
+                            i {
+                                position: absolute;
+                                padding-left: 24px;
+                                display: block;
+                                transform: translate(0, -43%);
+                                top: 43%;
+                                pointer-events: none;
+                                width: 25px;
+                                text-align: center;
+                                font-style: normal;
+                                color: $lightGray;
+                                z-index: 2;
+                            }
+                            input {
+                                padding: 15px 10px 16px 41px;
+                                border: 1px solid #c3c2c2;
+                                border-radius: 33.5px;
+                                border: 1px solid rgba(0, 0, 0, 0.15);
+                                width: 100px;
+                                outline: none;
+                            }
+                            input[type='number'] {
+                                font-family: Commissioner;
+                                font-style: normal;
+                                font-weight: bold;
+                                font-size: 14px;
+                                line-height: 17px;
+                                display: flex;
+                                align-items: center;
+                                color: $black;
+                                &:hover {
+                                    border: 1px solid $colorGreen;
+                                }
+                            }
+                        }
+                        .submit {
+                            font-family: Commissioner;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 17px;
+                            display: flex;
+                            align-items: center;
+                            color: $white;
+                            background: $colorGreen;
+                            border-radius: 33.5px;
+                            padding: 15px 25px 16px 26px;
+                            border: none;
+                            outline: none;
+                            &:hover {
+                                background-color: $hoverGreen;
+                                cursor: $cursor;
+                            }
+                        }
+                    }
+                }
+                .left {
+                    font-family: Commissioner;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 22px;
+                    display: flex;
+                    align-items: center;
+                    color: $black;
+                }
+                .small-text {
+                    font-family: Commissioner;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 15px;
+                    line-height: 18px;
+                    display: flex;
+                    align-items: center;
+                    color: $gray;
+                    margin-left: 8px;
+                }
+            }
+        }
+        .out-of-stock {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+    .modal-success {
+        display: none;
+        .modal-content2 {
+            margin: 100px 24px;
+            background-color: $white;
+            padding: 32px 0px 40px;
+            border-radius: 8px;
+            @media only screen and (min-width: 768px) {
+                width: 540px;
+                margin: 50px auto;
+            }
+            h3 {
+                font-family: Commissioner;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 22px;
+                color: $black;
+                margin: 19px auto;
+                text-align: center;
+                @media only screen and (min-width: 768px) {
+                    font-family: Commissioner;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 29px;
+                    align-items: center;
+                    text-align: center;
+                    color: $black;
+                    margin-top: 47px;
+                    margin-bottom: -5px;
+                }
+            }
+            p {
+                font-family: Commissioner;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: $gray;
+                margin: -10px 24px 31.5px;
+                @media only screen and (min-width: 768px) {
+                    font-family: Commissioner;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 30px;
+                    text-align: center;
+                    color: $gray;
+                    width: 444px;
+                    margin: 16px 48px 32px;
+                }
+            }
+            .gotIt {
+                font-family: Commissioner;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 17px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: $white;
+                background: $colorGreen;
+                border-radius: 33.5px;
+                border: none;
+                outline: none;
+                padding: 15px 32.5px 16px 33.5px;
+                &:hover {
+                    background-color: $hoverGreen;
+                    cursor: $cursor;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1434 @@
+:root {
+    --progress-bar: 79%;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #f2f2f2;
+}
+
+body header {
+    background-image: url('/images/image-hero-mobile.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+@media only screen and (min-width: 768px) {
+    body header {
+        background-image: url('/images/image-hero-desktop.jpg');
+        height: 420px;
+    }
+}
+
+body header .container-header {
+    margin: 0 24px;
+    padding-top: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+    body header .container-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(rgba(0, 0, 0, 0.5)),
+            color-stop(50%, transparent),
+            to(transparent)
+        );
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            transparent 50%,
+            transparent
+        );
+        width: 100%;
+        height: 328px;
+    }
+}
+
+body header .container-header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    body header .container-header nav .logo {
+        margin-left: 153px;
+        margin-top: -28px;
+        position: relative;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body header .container-header nav .burger {
+        display: none;
+    }
+}
+
+body header .container-header nav .navbar-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    padding: 24px;
+    top: 55px;
+    border-radius: 10px;
+    width: 100%;
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 0 9999rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 9999rem rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: block;
+    list-style-type: disc;
+    height: 212px;
+}
+
+@media only screen and (min-width: 768px) {
+    body header .container-header nav .navbar-list {
+        all: unset;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 32px;
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        margin-right: 160px;
+        margin-top: 15px;
+    }
+}
+
+body header .container-header nav .navbar-list .nav-link {
+    list-style: none;
+}
+
+@media only screen and (min-width: 768px) {
+    body header .container-header nav .navbar-list .nav-link:hover {
+        text-decoration: underline;
+    }
+}
+
+body header .container-header nav .navbar-list .nav-link a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+@media only screen and (min-width: 768px) {
+    body header .container-header nav .navbar-list .nav-link a {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #ffffff;
+    }
+}
+
+body
+    header
+    .container-header
+    nav
+    .navbar-list
+    .nav-link:not(:last-child):after {
+    content: '';
+    display: block;
+    margin: 24px -24px;
+    width: auto;
+    height: 1px;
+    background: #2f2f2f;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+}
+
+body header .container-header nav .navbar-list.nav-active {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+body main {
+    background-color: #fafafa;
+}
+
+body main .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0px 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container {
+        position: relative;
+        top: -35px;
+        width: 730px;
+        margin: 0 auto;
+    }
+}
+
+body main .container section.title-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    border-radius: 8px;
+    margin-top: -55px;
+}
+
+body main .container section.title-card .small-logo {
+    width: 56px;
+    height: 56px;
+    margin: -28px auto 24px;
+}
+
+body main .container section.title-card h2 {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin-left: 28px;
+    margin-right: 28px;
+    margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.title-card h2 {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 34px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+    }
+}
+
+body main .container section.title-card p {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #7a7a7a;
+    margin-right: 23.5px;
+    margin-left: 23.5px;
+    margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.title-card p {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        color: #7a7a7a;
+        margin-bottom: 40px;
+    }
+}
+
+body main .container section.title-card .btn-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.title-card .btn-group {
+        padding-bottom: 48px;
+    }
+}
+
+body main .container section.title-card .btn-group .btn-1 {
+    margin-left: 24px;
+    background: #3cb4ac;
+    border-radius: 33.5px;
+    padding: 17px 42px 19px 42px;
+    border: none;
+    outline: none;
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    width: 214px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.title-card .btn-group .btn-1 {
+        position: relative;
+        margin-left: 48px;
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #ffffff;
+        padding: 17px 41px 19px 40px;
+        width: 204px;
+    }
+}
+
+body main .container section.title-card .btn-group .btn-1:hover {
+    background-color: #147b74;
+    cursor: url('/images/pointer.png'), pointer;
+}
+
+body main .container section.title-card .btn-group .btn-2 {
+    outline: none;
+    border: none;
+    margin-right: 24px;
+    border-radius: 33.5px;
+    height: 56px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.title-card .btn-group .btn-2 {
+        position: relative;
+        margin-right: 48px;
+    }
+}
+
+body main .container section.title-card .btn-group .btn-2:hover {
+    background-color: #c3c2c2;
+    cursor: url('/images/pointer.png'), pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.title-card .btn-group .btn-with-image {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+body main .container section.title-card .btn-group .btn-text {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.title-card .btn-group .btn-text {
+        display: block;
+        padding-left: 16px;
+        padding-right: 24px;
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #7a7a7a;
+    }
+}
+
+body main .container section.statistics .split {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    border-radius: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.statistics .split {
+        padding-bottom: 98px;
+        padding-top: 8px;
+    }
+}
+
+body main .container section.statistics .split h1 {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    padding-top: 33px;
+    margin-bottom: 9px;
+}
+
+body main .container section.statistics .split p {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #7a7a7a;
+}
+
+body main .container section.statistics .split .below {
+    padding-bottom: 84px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.statistics .split .g1 {
+        position: absolute;
+        margin-left: 48px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.statistics .split .g2 {
+        position: absolute;
+        margin-left: 275px;
+        margin-top: -80px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.statistics .split .g3 {
+        position: absolute;
+        margin-left: 503px;
+        margin-top: -80px;
+    }
+}
+
+body main .container section.statistics .split .separator {
+    background: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.15;
+    height: 1px;
+    width: 80px;
+    margin: 24px auto 0px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.statistics .split .sep1 {
+        width: 1px;
+        height: 56px;
+        margin-left: 227px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.statistics .split .sep2 {
+        width: 1px;
+        height: 56px;
+        margin-left: 455px;
+        margin-top: -56px;
+    }
+}
+
+body main .container section.statistics .progress-bar {
+    height: 12px;
+    position: relative;
+    background-color: rgba(221, 217, 217, 0.281);
+    mix-blend-mode: normal;
+    border-radius: 33.5px;
+    margin-top: -52px;
+    margin-left: 25px;
+    margin-right: 23px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.statistics .progress-bar {
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+}
+
+body main .container section.statistics .progress-bar::after {
+    content: '';
+    position: absolute;
+    height: 12px;
+    border-radius: 33.5px;
+    background-color: #3cb4ac;
+    width: var(--progress-bar);
+}
+
+body main .container section.about {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    border-radius: 8px;
+    padding-bottom: 40px;
+    margin-top: 44px;
+}
+
+body main .container section.about h2 {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin: 0 24px;
+    padding-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.about h2 {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+        margin-left: 48px;
+    }
+}
+
+body main .container section.about p {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #7a7a7a;
+    margin: 0 24px;
+    padding-top: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.about p {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #7a7a7a;
+        font-weight: 400;
+        margin: 0px 48px;
+    }
+}
+
+body main .container section.about .mB {
+    margin-bottom: 35px;
+}
+
+body main .container section.about .bottom {
+    margin-bottom: 24px;
+}
+
+body main .container section.about div.reward-card {
+    position: relative;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 24px;
+    margin: 0 24px 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.about div.reward-card {
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.about div.reward-card .reward-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+body main .container section.about div.reward-card .reward-header h4 {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #000000;
+    margin-top: 24px;
+    margin-left: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.about div.reward-card .reward-header h4 {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #000000;
+        margin-left: 24px;
+    }
+}
+
+body main .container section.about div.reward-card .reward-header .pledge {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #3cb4ac;
+    margin-top: -22px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.about div.reward-card .reward-header .pledge {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: right;
+        color: #3cb4ac;
+        position: relative;
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.about div.reward-card p {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #7a7a7a;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.about .reward-availability {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        position: relative;
+    }
+}
+
+body main .container section.about .reward-availability h1 {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000000;
+    margin-left: 24px;
+}
+
+body main .container section.about .reward-availability span {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #7a7a7a;
+    vertical-align: 5px;
+}
+
+body main .container section.about .reward-availability .selectReward {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #ffffff;
+    background: #3cb4ac;
+    border-radius: 33.5px;
+    padding: 15px 33px 16px 32px;
+    border: none;
+    outline: none;
+    margin-top: 24px;
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    body main .container section.about .reward-availability .selectReward {
+        margin-right: 24px;
+        margin-top: 0px;
+    }
+    body
+        main
+        .container
+        section.about
+        .reward-availability
+        .selectReward:hover {
+        background-color: #147b74;
+        cursor: url('/images/pointer.png'), pointer;
+    }
+}
+
+body main .container section.about .out-of-stock {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+body .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 121px;
+    padding-bottom: 120px;
+}
+
+body .modal .modal-content {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 32px 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal .modal-content {
+        margin: 0px auto;
+        width: 730px;
+    }
+}
+
+body .modal .modal-content .modal-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+body .modal .modal-content .modal-header h2 {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal .modal-content .modal-header h2 {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+    }
+}
+
+body .modal .modal-content p {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #7a7a7a;
+    margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal .modal-content p {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #7a7a7a;
+    }
+}
+
+body .modal .modal-content .reward-card {
+    position: relative;
+    padding: 24px;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 24px;
+}
+
+body .modal .modal-content .reward-card .reward-header-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 0px;
+    padding-top: 14px;
+}
+
+body .modal .modal-content .reward-card .reward-header-wrapper input {
+    padding: 15px 10px 16px 41px;
+    border: 1px solid #c3c2c2;
+    border-radius: 33.5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    width: 100px;
+    outline: none;
+}
+
+body
+    .modal
+    .modal-content
+    .reward-card
+    .reward-header-wrapper
+    input[type='checkbox'] {
+    display: none;
+}
+
+body
+    .modal
+    .modal-content
+    .reward-card
+    .reward-header-wrapper
+    .custom-checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+body
+    .modal
+    .modal-content
+    .reward-card
+    .reward-header-wrapper
+    input[type='checkbox']:checked
+    ~ .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #3cb4ac;
+}
+
+body
+    .modal
+    .modal-content
+    .reward-card
+    .reward-header-wrapper
+    .custom-checkbox {
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+    margin-top: -5px;
+}
+
+body .modal .modal-content .reward-card .reward-header-wrapper .reward-header {
+    margin-top: -12px;
+}
+
+body
+    .modal
+    .modal-content
+    .reward-card
+    .reward-header-wrapper
+    .reward-header
+    .pledge {
+    color: #3cb4ac;
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal .modal-content .reward-card .reward-header-wrapper .hMove {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal .modal-content .reward-card .reward-header-wrapper .bS {
+        margin-left: 9px;
+        margin-top: -18px;
+        margin-right: 17px;
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #000000;
+    }
+    body .modal .modal-content .reward-card .reward-header-wrapper .bS:hover {
+        color: #3cb4ac;
+        cursor: url('/images/pointer.png'), pointer;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal .modal-content .reward-card .reward-header-wrapper .pl {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #3cb4ac;
+        margin-top: 5px;
+    }
+}
+
+body .modal .modal-content .reward-card .reward-header-wrapper h4 {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #000000;
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal .modal-content .reward-card .reward-header-wrapper .up {
+        margin-top: -16px;
+        margin-left: 9px;
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #000000;
+    }
+    body .modal .modal-content .reward-card .reward-header-wrapper .up:hover {
+        color: #3cb4ac;
+        cursor: url('/images/pointer.png'), pointer;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal .modal-content .reward-card .move {
+        margin-left: 48px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal .modal-content .reward-card .left2 {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #000000;
+        position: absolute;
+        margin-top: -128px;
+        margin-left: 560px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal .modal-content .reward-card .pledge-form-content-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+body .modal .modal-content .reward-card .rd {
+    margin-top: 27px;
+}
+
+body .modal .modal-content .reward-card .add-pledge-section hr {
+    margin: 16px -24px;
+    border-color: rgba(150, 145, 145, 0.281);
+}
+
+body .modal .modal-content .reward-card .add-pledge-section .enter-pledge {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    color: #7a7a7a;
+    text-align: center;
+    margin-top: 13.5px;
+    margin-bottom: 11px;
+}
+
+body .modal .modal-content .reward-card .add-pledge-section .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+body
+    .modal
+    .modal-content
+    .reward-card
+    .add-pledge-section
+    .form-group
+    .input-icon {
+    position: relative;
+}
+
+body
+    .modal
+    .modal-content
+    .reward-card
+    .add-pledge-section
+    .form-group
+    .input-icon
+    i {
+    position: absolute;
+    padding-left: 24px;
+    display: block;
+    -webkit-transform: translate(0, -43%);
+    transform: translate(0, -43%);
+    top: 43%;
+    pointer-events: none;
+    width: 25px;
+    text-align: center;
+    font-style: normal;
+    color: #c3c2c2;
+    z-index: 2;
+}
+
+body
+    .modal
+    .modal-content
+    .reward-card
+    .add-pledge-section
+    .form-group
+    .input-icon
+    input {
+    padding: 15px 10px 16px 41px;
+    border: 1px solid #c3c2c2;
+    border-radius: 33.5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    width: 100px;
+    outline: none;
+}
+
+body
+    .modal
+    .modal-content
+    .reward-card
+    .add-pledge-section
+    .form-group
+    .input-icon
+    input[type='number'] {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #000000;
+}
+
+body
+    .modal
+    .modal-content
+    .reward-card
+    .add-pledge-section
+    .form-group
+    .input-icon
+    input[type='number']:hover {
+    border: 1px solid #3cb4ac;
+}
+
+body
+    .modal
+    .modal-content
+    .reward-card
+    .add-pledge-section
+    .form-group
+    .submit {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #ffffff;
+    background: #3cb4ac;
+    border-radius: 33.5px;
+    padding: 15px 25px 16px 26px;
+    border: none;
+    outline: none;
+}
+
+body
+    .modal
+    .modal-content
+    .reward-card
+    .add-pledge-section
+    .form-group
+    .submit:hover {
+    background-color: #147b74;
+    cursor: url('/images/pointer.png'), pointer;
+}
+
+body .modal .modal-content .reward-card .left {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #000000;
+}
+
+body .modal .modal-content .reward-card .small-text {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #7a7a7a;
+    margin-left: 8px;
+}
+
+body .modal .out-of-stock {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+body .modal-success {
+    display: none;
+}
+
+body .modal-success .modal-content2 {
+    margin: 100px 24px;
+    background-color: #ffffff;
+    padding: 32px 0px 40px;
+    border-radius: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal-success .modal-content2 {
+        width: 540px;
+        margin: 50px auto;
+    }
+}
+
+body .modal-success .modal-content2 h3 {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin: 19px auto;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal-success .modal-content2 h3 {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+        margin-top: 47px;
+        margin-bottom: -5px;
+    }
+}
+
+body .modal-success .modal-content2 p {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #7a7a7a;
+    margin: -10px 24px 31.5px;
+}
+
+@media only screen and (min-width: 768px) {
+    body .modal-success .modal-content2 p {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        color: #7a7a7a;
+        width: 444px;
+        margin: 16px 48px 32px;
+    }
+}
+
+body .modal-success .modal-content2 .gotIt {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    background: #3cb4ac;
+    border-radius: 33.5px;
+    border: none;
+    outline: none;
+    padding: 15px 32.5px 16px 33.5px;
+}
+
+body .modal-success .modal-content2 .gotIt:hover {
+    background-color: #147b74;
+    cursor: url('/images/pointer.png'), pointer;
+}
+/*# sourceMappingURL=style.css.map */
