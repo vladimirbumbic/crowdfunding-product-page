@@ -1148,6 +1148,10 @@ body .modal .modal-content .reward-card .rd {
     margin-top: 27px;
 }
 
+body .modal .modal-content .reward-card .add-pledge-section {
+    display: none;
+}
+
 body .modal .modal-content .reward-card .add-pledge-section hr {
     margin: 16px -24px;
     border-color: rgba(150, 145, 145, 0.281);

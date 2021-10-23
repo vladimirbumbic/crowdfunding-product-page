@@ -816,6 +816,9 @@ body {
                 }
 
                 .add-pledge-section {
+                    display: none;
+                }
+                .add-pledge-section {
                     hr {
                         margin: 16px -24px;
                         border-color: $hrColor;
