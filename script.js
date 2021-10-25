@@ -51,7 +51,7 @@ const modals = () => {
 
     gotItBtn.addEventListener('click', handleCloseModal);
     closeBtn.addEventListener('click', handleCloseModal);
-    window.addEventListener('click', function (ev) {
+    window.addEventListener('click', (ev) => {
         modals.forEach((modal) => {
             if (ev.target == modal) {
                 handleCloseModal();

@@ -43,22 +43,22 @@ body header .container-header {
         position: absolute;
         top: 0;
         left: 0;
-        background-image: -webkit-gradient(
+        background: -webkit-gradient(
             linear,
             left top,
             left bottom,
-            from(rgba(0, 0, 0, 0.5)),
-            color-stop(50%, transparent),
-            to(transparent)
+            from(#000000),
+            to(rgba(0, 0, 0, 0.0001))
         );
-        background-image: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.5),
-            transparent 50%,
-            transparent
+        background: linear-gradient(
+            180deg,
+            #000000 0%,
+            rgba(0, 0, 0, 0.0001) 100%
         );
+        mix-blend-mode: normal;
+        opacity: 0.6;
         width: 100%;
-        height: 328px;
+        height: 128px;
     }
 }
 
@@ -435,7 +435,7 @@ body main .container section.statistics .split {
     }
 }
 
-body main .container section.statistics .split h1 {
+body main .container section.statistics .split .top-nums {
     font-family: Commissioner;
     font-style: normal;
     font-weight: bold;
@@ -756,7 +756,7 @@ body main .container section.about div.reward-card .reward-header .pledge {
     }
 }
 
-body main .container section.about .reward-availability h1 {
+body main .container section.about .reward-availability div {
     font-family: Commissioner;
     font-style: normal;
     font-weight: bold;
@@ -1338,16 +1338,25 @@ body .modal-success {
 }
 
 body .modal-success .modal-content2 {
-    margin: 100px 24px;
     background-color: #ffffff;
     padding: 32px 0px 40px;
     border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 327px;
 }
 
 @media only screen and (min-width: 768px) {
     body .modal-success .modal-content2 {
         width: 540px;
-        margin: 50px auto;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
 }
 
